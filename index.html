@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Playground Hub - A modern, interactive, and beautifully crafted web experience built with high-performance vanilla web standards.">
+  <meta name="keywords" content="playground, web development, modern ui, glassmorphism, dark mode">
+  <meta name="author" content="Muhammad Chandra Ramadhan">
+  <title>Playground • Modern Interactive Web Studio</title>
+  
+  <!-- Modern Typography (Google Fonts Outfit & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Gradient Background Orbs -->
+  <div class="ambient-glow orb-1" aria-hidden="true"></div>
+  <div class="ambient-glow orb-2" aria-hidden="true"></div>
+  <div class="ambient-glow orb-3" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="main-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" id="nav-brand-logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Playground<span class="logo-dot">.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="primary-nav" aria-label="Main Navigation">
+        <a href="#features" class="nav-link" id="nav-link-features">Features</a>
+        <a href="#sandbox" class="nav-link" id="nav-link-sandbox">Interactive Sandbox</a>
+        <a href="#stats" class="nav-link" id="nav-link-stats">Metrics</a>
+        <a href="https://github.com/MChandraR/playground" target="_blank" rel="noopener noreferrer" class="nav-link" id="nav-link-github">
+          GitHub
+          <svg class="external-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill" id="hero-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Modern Web Architecture • Live Preview</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-heading">
+            Next-Generation <span class="gradient-text">Interactive Web</span> Playground
+          </h1>
+
+          <p class="hero-description" id="hero-desc">
+            Rasakan keindahan antarmuka web modern dengan sistem desain glassmorphism, transisi mikro yang halus, palet warna dinamis, dan performa instan tanpa dependensi berlebih.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#sandbox" class="btn btn-primary" id="btn-hero-explore">
+              Coba Interactive Sandbox
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#features" class="btn btn-secondary" id="btn-hero-learn">
+              Pelajari Fitur
+            </a>
+          </div>
+
+          <div class="hero-meta-strip">
+            <div class="meta-item">
+              <span class="meta-value">0ms</span>
+              <span class="meta-label">Zero Bloat</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-value">100%</span>
+              <span class="meta-label">Vanilla Web</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-value">60 FPS</span>
+              <span class="meta-label">Smooth Motion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Interactive Hero Card -->
+        <div class="hero-visual" id="hero-card-container">
+          <div class="glass-card hero-widget-card" id="hero-widget-card">
+            <div class="widget-header">
+              <div class="status-indicator">
+                <span class="live-dot"></span>
+                <span>System Health: Nominal</span>
+              </div>
+              <span class="widget-chip" id="latency-chip">12ms response</span>
+            </div>
+
+            <div class="widget-display">
+              <div class="metric-row">
+                <div class="metric-box">
+                  <span class="metric-label">Efficiency</span>
+                  <span class="metric-number" id="metric-efficiency">99.8%</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-label">Render State</span>
+                  <span class="metric-number text-gradient" id="metric-render">Synchronized</span>
+                </div>
+              </div>
+
+              <!-- Animated Wave Graphic -->
+              <div class="wave-visual" aria-hidden="true">
+                <div class="wave-bar" style="--h: 35%; --d: 0.1s"></div>
+                <div class="wave-bar" style="--h: 60%; --d: 0.2s"></div>
+                <div class="wave-bar" style="--h: 85%; --d: 0.3s"></div>
+                <div class="wave-bar" style="--h: 40%; --d: 0.4s"></div>
+                <div class="wave-bar" style="--h: 95%; --d: 0.5s"></div>
+                <div class="wave-bar" style="--h: 70%; --d: 0.6s"></div>
+                <div class="wave-bar" style="--h: 50%; --d: 0.7s"></div>
+                <div class="wave-bar" style="--h: 80%; --d: 0.8s"></div>
+                <div class="wave-bar" style="--h: 65%; --d: 0.9s"></div>
+                <div class="wave-bar" style="--h: 90%; --d: 1.0s"></div>
+              </div>
+            </div>
+
+            <div class="widget-footer">
+              <div class="action-row">
+                <span class="action-text">Realtime Telemetry Active</span>
+                <button class="pulse-trigger-btn" id="btn-pulse-telemetry">Trigger Pulse</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Showcase Section -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" id="features-tag">Capabilities</span>
+          <h2 class="section-title" id="features-title">Didesain dengan Standar Visual Modern</h2>
+          <p class="section-desc">Kombinasi estetika kontemporer, keterbacaan tinggi, serta pengalaman pengguna yang intuitif.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="glass-card feature-card" id="feature-card-1">
+            <div class="feature-icon-wrapper" style="--icon-color: #6366f1;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Glassmorphism & Depth</h3>
+            <p class="feature-desc">Layer transparan bergradasi dengan filter blur latar belakang yang memberikan kedalaman visual natural dan premium.</p>
+          </div>
+
+          <div class="glass-card feature-card" id="feature-card-2">
+            <div class="feature-icon-wrapper" style="--icon-color: #10b981;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Dynamic Color Theming</h3>
+            <p class="feature-desc">Pergantian tema gelap dan terang instan dengan harmonisasi warna HSL adaptif yang nyaman di mata.</p>
+          </div>
+
+          <div class="glass-card feature-card" id="feature-card-3">
+            <div class="feature-icon-wrapper" style="--icon-color: #ec4899;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Micro-Interactions</h3>
+            <p class="feature-desc">Umpan balik visual langsung pada setiap interaksi pengguna melalui transisi CSS3 berbasis akselerasi perangkat keras.</p>
+          </div>
+
+          <div class="glass-card feature-card" id="feature-card-4">
+            <div class="feature-icon-wrapper" style="--icon-color: #f59e0b;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Fully Responsive Layout</h3>
+            <p class="feature-desc">Skema grid adaptif dan tipografi proporsional yang tampil sempurna di layar ponsel, tablet, hingga monitor resolusi ultra-wide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live Sandbox Section -->
+    <section class="section sandbox-section" id="sandbox">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" id="sandbox-tag">Live Playground</span>
+          <h2 class="section-title" id="sandbox-title">Interactive Customizer & Sandbox</h2>
+          <p class="section-desc">Ubah variabel desain secara langsung dan saksikan perubahannya secara real-time pada kartu interaktif.</p>
+        </div>
+
+        <div class="sandbox-layout">
+          <!-- Control Panel -->
+          <div class="glass-card sandbox-controls" id="sandbox-controls-card">
+            <h3 class="controls-title">Pengaturan Komponen</h3>
+
+            <!-- Accent Color Picker -->
+            <div class="control-group">
+              <label class="control-label">Aksen Warna Tema</label>
+              <div class="color-options-grid" id="color-picker-group">
+                <button class="color-btn active" data-color="indigo" style="--btn-color: #6366f1;" title="Indigo Accent" aria-label="Set Indigo Accent"></button>
+                <button class="color-btn" data-color="emerald" style="--btn-color: #10b981;" title="Emerald Accent" aria-label="Set Emerald Accent"></button>
+                <button class="color-btn" data-color="violet" style="--btn-color: #8b5cf6;" title="Violet Accent" aria-label="Set Violet Accent"></button>
+                <button class="color-btn" data-color="rose" style="--btn-color: #f43f5e;" title="Rose Accent" aria-label="Set Rose Accent"></button>
+                <button class="color-btn" data-color="amber" style="--btn-color: #f59e0b;" title="Amber Accent" aria-label="Set Amber Accent"></button>
+              </div>
+            </div>
+
+            <!-- Card Corner Radius Slider -->
+            <div class="control-group">
+              <div class="slider-header">
+                <label for="radius-slider" class="control-label">Border Radius</label>
+                <span class="slider-value" id="radius-val">16px</span>
+              </div>
+              <input type="range" id="radius-slider" min="0" max="32" value="16" class="range-slider">
+            </div>
+
+            <!-- Card Blur Slider -->
+            <div class="control-group">
+              <div class="slider-header">
+                <label for="blur-slider" class="control-label">Backdrop Blur</label>
+                <span class="slider-value" id="blur-val">16px</span>
+              </div>
+              <input type="range" id="blur-slider" min="0" max="30" value="16" class="range-slider">
+            </div>
+
+            <!-- Interactive Counter -->
+            <div class="control-group">
+              <label class="control-label">Counter Interaktif</label>
+              <div class="counter-control">
+                <button class="btn-counter" id="counter-decrement" aria-label="Kurangi Counter">−</button>
+                <span class="counter-display" id="counter-value">0</span>
+                <button class="btn-counter" id="counter-increment" aria-label="Tambah Counter">+</button>
+                <button class="btn-counter-reset" id="counter-reset" title="Reset Counter">Reset</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Preview Sandbox Card -->
+          <div class="sandbox-preview">
+            <div class="glass-card preview-card" id="sandbox-preview-card">
+              <div class="preview-card-banner">
+                <span class="preview-badge" id="preview-badge">Live Preview Component</span>
+              </div>
+              <div class="preview-card-body">
+                <h4 class="preview-heading" id="preview-heading">Dynamic Card Interface</h4>
+                <p class="preview-text">
+                  Komponen ini merespons perubahan slider dan pemilih warna di sebelah kiri secara instan.
+                </p>
+                <div class="preview-tags">
+                  <span class="tag">#VanillaCSS</span>
+                  <span class="tag">#Glassmorphism</span>
+                  <span class="tag">#HighPerformance</span>
+                </div>
+                <div class="preview-action-row">
+                  <button class="btn btn-primary btn-sm" id="btn-preview-action">Trigger Event</button>
+                  <span class="preview-status" id="preview-event-status">Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="section stats-section" id="stats">
+      <div class="container">
+        <div class="glass-card stats-wrapper">
+          <div class="stat-card">
+            <span class="stat-number" data-target="99">99%</span>
+            <span class="stat-label">Lighthouse Score</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="100">100%</span>
+            <span class="stat-label">Responsive Fidelity</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="0">0 KB</span>
+            <span class="stat-label">Third-party Runtime</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="24">24/7</span>
+            <span class="stat-label">Continuous Lifecycle</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">Playground</span>
+        </div>
+        <p class="footer-desc">Crafted with precision using modern HTML5, CSS3, and JavaScript standards.</p>
+      </div>
+
+      <div class="footer-right">
+        <p class="copyright">© 2026 Muhammad Chandra Ramadhan (@MChandraR). All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/MChandraR/playground" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a href="https://github.com/MChandraR/playground/issues/1" target="_blank" rel="noopener noreferrer">Issue #1</a>
+          <a href="#hero">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
